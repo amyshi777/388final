@@ -1,0 +1,115 @@
+.life-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 4rem 2rem;
+    text-align: center;
+}
+
+.life-title {
+    font-size: 3rem;
+    color: #2F3A2F;
+    margin-bottom: 1rem;
+}
+
+.life-blurb {
+    font-family: 'Lora', serif;
+    font-size: 1.05rem;
+    color: #4A2F21;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.life-gallery {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 3rem 4rem 0;
+}
+
+.life-heading {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.life-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.life-card {
+    background-color: #D4E0C2;
+    border-radius: 1.3rem;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    font-family: 'Lora', serif;
+    color: #2F3A2F;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.life-card img {
+    width: 100%;
+    height: 230px;
+    border-radius: 1rem;
+    object-fit: cover;
+    display: block;
+}
+
+.life-card figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+    color: #4A2F21;
+}
+
+.life-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 767px) {
+    .life-hero {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .life-title {
+        font-size: 2.3rem;
+    }
+
+    .life-blurb {
+        font-size: 0.98rem;
+    }
+
+    .life-current {
+        padding: 0 1.5rem;
+    }
+
+    .life-gallery {
+        padding: 2.5rem 1.5rem 0;
+    }
+
+    .life-grid {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .life-card img {
+        height: 220px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .life-hero {
+        padding: 3rem 3rem 2rem;
+    }
+
+    .life-gallery {
+        max-width: 1000px;
+        padding: 3rem 3rem 0;
+    }
+
+    .life-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.25rem;
+    }
+}

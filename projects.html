@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/projects.css">
+    <title>projects</title>
+</head>
+<body>
+    <header class="top">
+        <a class="home heading" href="main.html">amy</a>
+        <div class="links">
+            <a class="heading" href="about_me.html">about me</a>
+            <a class="heading" href="projects.html">projects</a>
+            <a class="heading" href="life.html">life</a>
+        </div>
+    </header>
+    <main class="theme1">
+        <br>
+        <h1 class="intro2">
+            what i've worked on
+        </h2>
+        <article class="project-card">
+            <h2 class="project-title">UROP multilingual computational analysis</h2>
+            <figure class="project-image-wrapper">
+                <img src="images/uropproj.png" 
+                    alt="research poster titled Multilingual Computational Analysis of Historical Texts: A Case Study of Robinson Crusoe Translations">
+                <figcaption class="project-image-caption">
+                    research poster from my urop project on building a multilingual corpus of robinson crusoe
+                    translations for computational text analysis
+                </figcaption>
+            </figure>
+            <section class="project-content">
+                <p class="project-summary">
+                    a research project using multilingual robinson crusoe translations as a case study for computational analysis of historical texts,
+                    focusing on building a clean corpus from noisy scans and comparing patterns across languages.
+                </p>
+                <div class="project-star">
+                    <div class="star-row">
+                        <span class="star-label">S</span>
+                        <p class="star-text">
+                            our research group wanted to study multilingual robinson crusoe translations, but the texts only existed as uneven-quality scans scattered across digital libraries.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">T</span>
+                        <p class="star-text">
+                            turn 1,200+ scanned pages into a clean, structured dataset that we could reliably use for nlp analysis, without spending forever on manual checking.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">A</span>
+                        <p class="star-text">
+                            i sourced translations from hathitrust, google books, and public-library archives, then built a python + pandas ocr pipeline that converted the scans into structured dataframes. i also added automatic tests that flagged ocr/tokenization mismatches.
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">R</span>
+                        <p class="star-text">
+                            we ended up with a high-quality corpus ready for downstream nlp work and cut manual qa time by about 25%, making it much faster to experiment with new questions and models.
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="project-card">
+            <h2 class="project-title">spotify bot</h2>
+            <figure class="project-image-wrapper">
+                <img src="images/proj2.png" 
+                    alt="A Discord bot that used Spotify's API to collect various songs and artists on Spotify">
+                <figcaption class="project-image-caption">
+                    pixel art drawing of the program's icon
+                </figcaption>
+            </figure>
+            <section class="project-content">
+                <p class="project-summary">
+                    an automous program that handle on-demand, artist-specific track recommendations via slash commands.
+                </p>
+                <div class="project-star">
+                    <div class="star-row">
+                        <span class="star-label">S</span>
+                        <p class="star-text">
+                            friends on my Discord server wanted quick, personalized music recommendations,
+                            but bouncing between Discord and Spotify was clunky.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">T</span>
+                        <p class="star-text">
+                            build a bot that could serve artist-specific Spotify track recommendations directly inside Discord on demand.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">A</span>
+                        <p class="star-text">
+                            implemented an asynchronous Discord bot using discord.py integrated with the Spotify Web API
+                            and slash commands, and wrote a Selenium scraper to seed a JSON dataset with 1,000+ artist names.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">R</span>
+                        <p class="star-text">
+                            server members can now get tailored track recommendations with a single command,
+                            and the automated scraper eliminates manual data entry when expanding the bot's catalog.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <article class="project-card">
+            <h2 class="project-title">spotify bot</h2>
+            <figure class="project-image-wrapper">
+                <img src="images/proj1.jpg" 
+                    alt="close-up of a prototype educational toy on a lab bench">
+                <figcaption class="project-image-caption">
+                    prototype of our fpga-powered letter blocks toy with 3d-printed blocks and wired microprocessor
+                </figcaption>
+            </figure>
+            <section class="project-content">
+                <p class="project-summary">
+                    an automous program that handle on-demand, artist-specific track recommendations via slash commands.
+                </p>
+                <div class="project-star">
+                    <div class="star-row">
+                        <span class="star-label">S</span>
+                        <p class="star-text">
+                            early-grade literacy scores in the U.S. have declined, especially after remote learning,
+                            and young learners often struggle to stay engaged with traditional reading drills.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">T</span>
+                        <p class="star-text">
+                            design an interactive toy that lets children physically build sight words with blocks,
+                            then hear letter names and words spoken back to them, giving teachers and parents a more engaging way to practice reading.
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">A</span>
+                        <p class="star-text">
+                            our team created JAIN blocks: 3D-printed letter blocks act like encoded switches in slots,
+                            wired through pull-down resistor circuits to an FPGA board
+                        </p>
+                    </div>
+                    <div class="star-row">
+                        <span class="star-label">R</span>
+                        <p class="star-text">
+                            the final prototype successfully recognizes letter combinations, sounds out and speaks valid words,
+                            and gives immediate audio feedback when a spelling is wrong
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+        <br>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-left">
+            <h2 class="footer-title">let's connect!</h2>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/amyshiny/" 
+                class="footer-icon-link" 
+                aria-label="LinkedIn" target="_blank">
+                    <span class="footer-icon-circle">in</span>
+                </a>
+
+                <a href="mailto:amyshi@umich.edu" 
+                class="footer-icon-link" 
+                aria-label="Email" target="_blank">
+                    <span class="footer-icon-circle">✉</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

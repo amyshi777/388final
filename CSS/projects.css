@@ -1,0 +1,151 @@
+.project-card {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1.2rem 1.3rem 1.4rem;
+    margin: 1rem auto;
+    border-radius: 18px;
+    background: #fffdf8;
+    border: 1px solid #f3e6d6;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    font-family: "Gaegu", system-ui, sans-serif;
+}
+
+.project-title {
+    margin: 0 0 0.6rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+}
+
+.project-image-wrapper {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto 0.9rem;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #d8e3c2;
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2px;
+    object-fit: cover;
+}
+
+.project-image-caption {
+    margin-top: 0.3rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.project-summary {
+    margin: 0;
+    font-size: 1.40rem;
+    line-height: 1.4;
+}
+
+.project-star {
+    margin-top: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.star-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.star-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 999px;
+    border: 1px solid #f4a8c6;
+    background: #ffe7f1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.star-text {
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1.4;
+}
+
+.project-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+@media (max-width: 767px) {
+    .project-card {
+        padding: 1rem 1rem 1.5rem;
+        margin: 1rem auto;
+        border-radius: 14px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-summary,
+    .star-text {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .project-image-wrapper {
+        max-width: 100%;
+    }
+
+    .project-image-caption {
+        font-size: 0.9rem;
+    }
+
+    .star-label {
+        width: 1.3rem;
+        height: 1.3rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .project-card {
+        padding: 1.25rem 1.5rem 1.75rem;
+        margin: 1.25rem auto;
+    }
+
+    .project-title {
+        font-size: 1.7rem;
+    }
+
+    .project-summary,
+    .star-text {
+        font-size: 1.05rem;
+    }
+
+    .project-image-wrapper {
+        max-width: 90%;
+    }
+
+    .project-image-caption {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,363 @@
+.about-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 4rem 5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.about-text {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: #2F3A2F;
+}
+
+.about-heading {
+    font-family: 'Lora', serif;
+    font-size: 4rem;
+    margin: 0 0 1.5rem 0;
+    letter-spacing: 0.04em;
+}
+
+.about-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0 0 1rem 0;
+    color: #4A2F21;
+}
+
+.about-cta {
+    margin-top: 2rem;
+}
+
+.about-photo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-photo img {
+    width: 480px;
+    max-width: 100%;
+    border-radius: 1.5rem;
+    border: 6px solid #597A4F;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.16);
+    object-fit: cover;
+}
+
+.experience-section {
+    max-width: 1000px;
+    margin: 0 auto 0;
+    padding: 3rem 4rem 0;
+}
+
+.experience-heading {
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 1.5rem;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.45rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #C6D4B3;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 3px solid #597A4F;
+    background-color: #EEF2E8;
+    position: relative;
+    top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    flex: 1;
+    font-family: 'Lora', serif;
+    color: #2F3A2F;
+}
+
+.experience-top-row,
+.experience-meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.experience-company {
+    font-weight: 700;
+    text-transform: lowercase;
+}
+
+.experience-location,
+.experience-dates {
+    font-size: 0.95rem;
+    color: #4A2F21;
+    opacity: 0.9;
+}
+
+.experience-role {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-top: 0.15rem;
+}
+
+.experience-bullets {
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #4A2F21;
+}
+
+.experience-bullets li + li {
+    margin-top: 0.35rem;
+}
+.outside-section {
+    max-width: 1200px;
+    margin: 0 auto 4rem;
+    padding: 3rem 4rem 0;
+}
+
+.outside-heading {
+    font-size: 2.4rem;
+    margin-bottom: 5rem;
+}
+
+.outside-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4rem;
+}
+
+.outside-card {
+    position: relative;
+    perspective: 1000px;
+    height: 250px;
+    font-family: 'Lora', serif;
+    color: #2F3A2F;
+}
+
+.outside-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    border-radius: 1.3rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.outside-face {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem 1.75rem;
+    border-radius: 1.3rem;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.outside-front {
+    background-color: #D4E0C2;
+    color: #2F3A2F;
+}
+
+.outside-back {
+    background-color: #D4E0C2;
+    transform: rotateY(180deg);
+    padding: 0;
+}
+
+.outside-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+}
+
+.outside-card:hover .outside-card-inner {
+    transform: rotateY(180deg);
+}
+
+.outside-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.outside-text {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #4A2F21;
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        flex-direction: column-reverse;
+        padding: 2.5rem 1.5rem 3rem;
+        gap: 2rem;
+    }
+
+    .about-heading {
+        font-size: 2.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .about-paragraph {
+        font-size: 0.98rem;
+        line-height: 1.6;
+    }
+
+    .about-photo img {
+        width: 320px;
+        max-width: 100%;
+    }
+
+    .experience-section {
+        max-width: 100%;
+        padding: 2.5rem 1.5rem 0;
+    }
+
+    .experience-heading {
+        font-size: 2.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline {
+        margin-left: 1rem;
+    }
+
+    .timeline::before {
+        left: 0.35rem;
+    }
+
+    .timeline-item {
+        gap: 0.9rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .experience-role {
+        font-size: 0.98rem;
+    }
+
+    .experience-bullets {
+        font-size: 0.95rem;
+    }
+
+    .outside-section {
+        max-width: 100%;
+        padding: 2.5rem 1.5rem 0;
+        margin-bottom: 3rem;
+    }
+
+    .outside-heading {
+        font-size: 2.1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .outside-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .outside-card {
+        height: 230px;
+    }
+
+    .outside-title {
+        font-size: 1.1rem;
+    }
+
+    .outside-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .view-all-wrapper {
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    .about-hero {
+        padding: 3rem 3rem 4rem;
+        gap: 3rem;
+    }
+
+    .about-heading {
+        font-size: 3.2rem;
+    }
+
+    .about-paragraph {
+        font-size: 1rem;
+    }
+
+    .about-photo img {
+        width: 400px;
+    }
+
+    .experience-section {
+        max-width: 1000px;
+        padding: 3rem 3rem 0;
+    }
+
+    .experience-heading {
+        font-size: 2.4rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .timeline {
+        margin-left: 1.25rem;
+    }
+
+    .outside-section {
+        max-width: 1000px;
+        padding: 3rem 3rem 0;
+        margin-bottom: 3.5rem;
+    }
+
+    .outside-heading {
+        font-size: 2.3rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .outside-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem;
+    }
+
+    .outside-card {
+        height: 250px;
+    }
+}
